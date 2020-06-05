@@ -1,9 +1,17 @@
-
+#---------
 
 
 ## Definindo Vars Explicativas, ajustanto classe e criando tabela com def de nome e Classe das mesmas ##
 
 AED_biv <- function(Base, Response_var, Analyse = "Pre") {
+  
+  #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  #+                      Importanto pacotes utilizados no aplicativo                             +
+  #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  suppressMessages(library(dplyr))         #Pacote para manipulação de dados
+  suppressMessages(library(ggplot2))       #Pacote para exibição gráfica
+  
+  
   #Placing the y factor to the end of the table so it will not be valuated.
   only.y <- Base[, glue("Response"), drop = FALSE]
   only.x <-

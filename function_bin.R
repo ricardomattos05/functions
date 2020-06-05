@@ -2,6 +2,18 @@
 
 
 bin_var <- function(df, y) {
+  
+  
+  #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  #+                      Importanto pacotes utilizados no aplicativo                             +
+  #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  suppressMessages(library(dplyr))         #Pacote para manipulação de dados
+  suppressMessages(library(tree.bins))     #Pacote para binning por decision tree - variaveis categoricas
+  suppressMessages(library(woeBinning))    #Pacote para binning por woe - variaveis numericas
+  
+  
+  
+  
   ## transform vars with low lenght in factor variable
   for (i in 1:length(df)) {
     if (!is.factor(df[, i]) & length(unique(df[, i])) <= 10) {
