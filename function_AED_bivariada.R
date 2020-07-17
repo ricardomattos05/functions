@@ -13,7 +13,7 @@ AED_biv <- function(Base, Response_var, Analyse = "Pre") {
   
   
   #Placing the y factor to the end of the table so it will not be valuated.
-  only.y <- Base[, glue("Response"), drop = FALSE]
+  only.y <- Base[, glue("Response_var"), drop = FALSE]
   only.x <-
     Base[,!(names(Base) %in% names(only.y))] %>% as.data.frame()
   
