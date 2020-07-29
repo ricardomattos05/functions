@@ -33,7 +33,7 @@ AED_biv <- function(Base, Response_var, Analyse = "Pre") {
   
   ############### Gerar dist pre e pos Binning #################
   if (Analyse == "Pre") {
-    for (i in 1:(length(Base))) {
+    for (i in 1:(length(Base)-1)) {
       if (x[i, 2] %in% c("character", "factor")) {
         #Caso Variaveis categoricas
         prop1 <-
