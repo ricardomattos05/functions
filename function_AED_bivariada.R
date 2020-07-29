@@ -61,7 +61,8 @@ AED_biv <- function(Base, Response_var, Analyse = "Pre") {
         
         p2 <- ggplot(data = Base, aes(x = get(vars[i]))) +
           geom_bar(alpha = 0.6) + xlab(glue(vars[i])) +
-          facet_grid(get(glue(Response_var)) ~ ., scales = "free")
+          theme(axis.text.x = element_text(angle = 90)) +
+          facet_grid(get(glue(Response_var)) ~ ., scales = "free") 
         
         
         grid.arrange(p1, p2)#, p3, p3.3)
