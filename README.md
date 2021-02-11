@@ -1,2 +1,2 @@
-# functions
+# Functions
 Repositório de funções
